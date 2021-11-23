@@ -7,8 +7,16 @@ project_path=""
 read -p "Project name: " project_name
 read -p "Project path: " project_path
 
-python3.9 -m venv $project_path/$project_name/venv
-. $project_path/$project_name/venv/bin/activate
+mkdir $project_path/$project_name
+
+cp manage.py $project_path/$project_name/
+cp -r config $project_path/$project_name/
+cp .gitignore $project_path/$project_name/
+
+cd $project_path/$project_name/
+
+python3.9 -m venv venv
+. venv/bin/activate
 
 # Libraries
 pip install -U pip
@@ -18,5 +26,7 @@ pip install requests
 pip install dj-database-url
 pip install django-cleanup
 
-cp manage.py $project_path/$project_name/
-cp config $project_path/$project_name/
+python manage.py makemigrations
+python manage.py migrate
+
+pip freeze -> requirements.txt
