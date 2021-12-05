@@ -14,6 +14,7 @@ cp -r config $project_path/$project_name/
 cp .gitignore $project_path/$project_name/
 cp -r static $project_path/$project_name/
 cp -r templates $project_path/$project_name/
+cp .gitignore $project_path/$project_name/
 
 cd $project_path/$project_name/
 
