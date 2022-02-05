@@ -1,1 +1,1 @@
-# All my Django projects
+# My Django projects
