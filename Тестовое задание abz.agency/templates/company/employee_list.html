@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Employees{% endblock title %}
+{% block content %}
+<script src="{% static 'js/main.js' %}"></script>
+<div style="padding-left: 5%;">
+    <div style="padding: 30px; font-size: 28px;">
+        {% if request.user.is_authenticated %}
+        <span>Hi {{user.username}}!!! | </span>
+        {% endif %}
+        <a href="{% url 'home' %}">Go to Home</a>
+        <span> | </span>
+        <a href="{% url 'login' %}">Login</a>
+        <span> | </span>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+    <hr>
+    <div>
+        <form action="{% url 'employees' %}" method="POST" id="myForm">
+            {% csrf_token %}
+            <input type="text" id="search" name="search" placeholder="Search" autocomplete="off" />
+            <a href="{% url 'employees' %}">Reset</a>
+        </form>
+
+        <button id="fio" class="getOrdering">ФИО</button> |
+        <button id="position" class="getOrdering">Должность</button> |
+        <button id="chief__name" class="getOrdering">Им'я начальника</button> |
+        <button id="join_date" class="getOrdering">Дата приёма на роботу</button> |
+        <button id="salary" class="getOrdering">Размер ЗП</button>
+    </div>
+    <hr>
+    <div class="employees">
+        {% for employee in employees %}
+        <div>
+            <img style="width: 100px; height: 100px;" src="{{employee.avatar.url}}" alt="">
+            <h2>{{employee.fio}} ({{employee.id}})</h2>
+            {{employee.position}} | {{employee.chief.name}} | {{employee.salary}} | {{employee.join_date}}
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

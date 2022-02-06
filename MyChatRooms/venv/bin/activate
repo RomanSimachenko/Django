@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/roma/Documents/GitHub/MyChatRooms/venv"
+VIRTUAL_ENV="/home/roma/Documents/GitHub/Django/MyChatRooms/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

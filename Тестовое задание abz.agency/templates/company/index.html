@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Company employees{% endblock title %}
+{% block content %}
+<div style="padding-left: 5%;">
+    <div style="padding: 30px; font-size: 28px;">
+        {% if request.user.is_authenticated %}
+        <span>Hi {{user.username}}!!! | </span>
+        {% endif %}
+        <a href="{% url 'employees' %}">Go to Employees</a>
+        <span> | </span>
+        <a href="{% url 'login' %}">Login</a>
+        <span> | </span>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+    <hr>
+    {% for employee in employees %}
+    <div style="text-align: center;">
+        <h2>{{employee.fio}} ({{employee.id}})</h2>
+        {{employee.position}} | {{employee.chief.name}} | {{employee.salary}} | {{employee.join_date}}
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock content %}

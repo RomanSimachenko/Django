@@ -1,4 +1,4 @@
-#!/home/roma/Documents/GitHub/MyChatRooms/venv/bin/python
+#!/home/roma/Documents/GitHub/Django/MyChatRooms/venv/bin/python3.9
 # -*- coding: utf-8 -*-
 import re
 import sys
