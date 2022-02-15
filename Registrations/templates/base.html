@@ -5,12 +5,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{% block title %} {% endblock title %}</title>
 </head>
 
 <body>
+    {% include 'include/header.html' %}
+    <hr>
     {% include 'include/navbar.html' %}
+    <hr>
     <section>
         {% block content %}
 

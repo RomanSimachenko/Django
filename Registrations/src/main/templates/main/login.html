@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Login {% endblock title %}
+
+{% block content %}
+<div class="login">
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="username_email">Username or email</label>
+                <input type="text" name="username_email" id="id_username_email" required maxlength="254">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="id_password" required maxlength="50">
+            </div>
+            <div>
+                <ul>
+                    {% for message in messages %}
+                    <li>{{message}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+{% endblock content %}

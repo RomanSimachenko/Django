@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Verify Email {% endblock title %}
+
+{% block content %}
+<div class="verify">
+    <div>
+        <h4>Verification code(sent to the entered email):</h4>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="id_email" readonly value="{{user.email}}">
+            </div>
+            <div>
+                <label for="code">Verification code</label>
+                <input type="text" name="code" id="id_code" maxlength="50" required>
+            </div>
+            <div>
+                <ul>
+                    {% for message in messages %}
+                    <li>{{message}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock content %}

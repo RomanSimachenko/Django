@@ -1,9 +1,13 @@
 {% load static %}
 
-<div>
+<div class="navbar">
     <div>
         <ul class="nav-items">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'user-profile' request.user.id %}">Profile</a></li>
+            {% endif %}
+            <li><a href="{% url 'google-auth' %}">Google Auth</a></li>
         </ul>
     </div>
-    <hr>
 </div>
