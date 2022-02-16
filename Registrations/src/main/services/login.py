@@ -29,20 +29,18 @@ def _authenticate_user(request, username_email, password):
     if "@" in username_email:
         base_user = User.objects.get(email=username_email)
         if not base_user.is_active:
-            username = base_user.username
-            token = services.generate_token()
-            return redirect("verify-email", data1=services.encode_and_decode_message(username, "encode"),
-                            data2=services.encode_and_decode_message(token, "encode"))
+            services.send_message_to_email(base_user.email, "http://localhost:8000/check-verify/" +
+                                           services.encode_and_decode_message(base_user.username, "encode") + "/")
+            return redirect("message")
         else:
             user = authenticate(
                 request, username=base_user.username, password=password)
     else:
         base_user = User.objects.get(username=username_email)
         if not base_user.is_active:
-            username = base_user.username
-            token = services.generate_token()
-            return redirect("verify-email", data1=services.encode_and_decode_message(username, "encode"),
-                            data2=services.encode_and_decode_message(token, "encode"))
+            services.send_message_to_email(base_user.email, "http://localhost:8000/check-verify/" +
+                                           services.encode_and_decode_message(base_user.username, "encode") + "/")
+            return redirect("message")
         else:
             user = authenticate(
                 request, username=username_email, password=password)

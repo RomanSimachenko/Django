@@ -1,5 +1,3 @@
-import email
-import imp
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -55,8 +53,7 @@ def _form_valid(form):
 
     new_user.save()
 
-    username = services.encode_and_decode_message(new_user.username, 'encode')
-    token = services.generate_token()
-    token = services.encode_and_decode_message(token, "encode")
+    services.send_message_to_email(new_user.email, "http://localhost:8000/check-verify/" +
+                                   services.encode_and_decode_message(new_user.username, "encode") + "/")
 
-    return redirect("verify-email", data1=username, data2=token)
+    return redirect("message")

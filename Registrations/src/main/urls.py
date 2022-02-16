@@ -13,6 +13,6 @@ urlpatterns = [
 
     path('user-profile/<int:id>/', views.UserProfileView, name="user-profile"),
 
-    path("verify-email/<str:data1>/<str:data2>/",
-         views.VerifyEmailView, name="verify-email"),
+    path("message/", views.MessageView, name="message"),
+    path("check-verify/<str:data1>/", views.CheckVerifyView, name="check-verify"),
 ]

@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.conf import settings
-import random
+from django.core.mail import send_mail
 import base64
 
 
@@ -14,20 +14,20 @@ def encode_and_decode_message(message, do):
     if do.lower() == 'encode':
         message_bytes = message.encode('ascii')
         base64_bytes = base64.b64encode(message_bytes)
-        return base64_bytes.decode('ascii') * 2
+        return base64_bytes.decode('ascii') * settings.TOKEN_REPEATS
     else:
-        message_bytes = message[:len(message) // 2].encode('ascii')
+        message_bytes = message[:len(
+            message) // settings.TOKEN_REPEATS].encode('ascii')
         base64_bytes = base64.b64decode(message_bytes)
         return base64_bytes.decode('ascii')
 
 
-def generate_token():
-    """Generates token for verify"""
-    all_possible = list(settings.TOKEN_SYMBOLS)
-    token = ""
-    for _ in range(settings.TOKEN_LENGTH):
-        choice_symbol = random.choice(all_possible)
-        token += choice_symbol
-        del all_possible[all_possible.index(choice_symbol)]
-
-    return token
+def send_message_to_email(email, link):
+    """Sends message to the user email"""
+    send_mail(
+        'Django',
+        f'Your verification link: {link}',
+        settings.EMAIL_HOST_USER,
+        [email],
+        fail_silently=False,
+    )
