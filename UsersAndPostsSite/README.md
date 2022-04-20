@@ -14,4 +14,7 @@ At the root of the project (where is manage.py) create shell script `$ vim/nano 
 SECRET_KEY=<django secret key>
 DEBUG=True
 ```
-Then activate it.
+Then activate it `$ ./source setenv.sh`
+
+#### Starting
+Project can be started using the command `$ python/python3 manage.py runserver localhost:8000` or `$ ./manage.py runserver localhost:8000`
