@@ -10,7 +10,7 @@
 2. Install all the requirements `$ pip install -r requirements.txt`
 
 At the root of the project (where is `manage.py`) create shell script `$ vim/nano setenv.sh` and add to it next variables:
-```
+```shell
 export SECRET_KEY="<django secret key>"
 export DEBUG=True
 ```
