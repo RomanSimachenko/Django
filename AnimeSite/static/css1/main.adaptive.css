@@ -1,0 +1,131 @@
+/* ---- © 2021-2022 by Arksault | ANIO EE`` ---- */
+
+@media screen and (max-width: 1300px) {
+	
+}
+
+@media screen and (max-width: 1000px) {
+	.baka {
+		flex-direction: column;
+	}
+	
+	.side-l {
+		padding: 10px 0;
+		height: auto;
+	}
+	
+	.side-l_hide {
+		display: none;
+	}
+	
+	.baka-main {
+		padding: 15px;
+		border-top: 1rem solid transparent;
+		border-bottom: 1rem solid transparent;
+	}
+	
+	.navigate {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		height: auto;
+	}
+	
+	.navigate .__link {
+		padding: 8px;
+	}
+	
+	.logo-site,
+	.navigate-sep,
+	.arksault {
+		display: none;
+	}
+	
+	.post-head {
+		flex-direction: column;
+		margin-bottom: 21px;
+	}
+	
+	.thumbnail_full {
+		width: 220px; height: 330px;
+	}
+	
+	.post-title {
+		margin: 20px 0 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	
+}
+
+@media screen and (max-width: 930px) {
+	
+}
+
+@media screen and (max-width: 800px) {
+	
+}
+
+@media screen and (max-width: 768px) {
+	.cards-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 730px) {
+	
+}
+
+@media screen and (max-width: 620px) {
+	
+}
+
+@media screen and (max-width: 590px) {
+	
+	.active-card .post-card__body {
+		flex-direction: column;
+	}
+	
+	.active-card .post-card-container {
+		width: 100%;
+		margin: 10px 0 0;
+	}
+
+}
+
+@media screen and (max-width: 520px) {
+
+}
+
+@media screen and (min-width: 1140px) {
+	.cards-list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media screen and (min-width: 890px) and (max-width: 1140px) {
+	.cards-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (min-width: 724px) and (max-width: 1000px) {
+	.cards-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 724px) {
+	.cards-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 200px) and (max-width: 480px) {
+	.cards-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

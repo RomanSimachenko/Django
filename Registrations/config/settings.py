@@ -1,15 +1,15 @@
-import os
 from pathlib import Path
+import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=1n=8z7u(ha)-a-w20_^filn-kp%v131!w8a%9)7yew&mi(lq@'
+SECRET_KEY = 'pw+*a^45y7s_f(im29%4ot2222m1h7zed4w+$03_trf4)0)!l!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,10 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'src.main.apps.MainConfig',
-    'src.google_auth.apps.GoogleAuthConfig',
-
     'social_django',
+
+    'main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +48,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'templates',
+            os.path.join(BASE_DIR, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -67,18 +66,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
 
 # Password validation
-# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 # AUTH_PASSWORD_VALIDATORS = [
 #     {
@@ -97,32 +96,43 @@ DATABASES = {
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
+# https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
+# https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 # Custom settings
 
@@ -130,43 +140,42 @@ LOGIN_URL = "/login/"
 
 REGISTER_URL = "/register/"
 
-LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = "/login/"
 
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = "/"
 
-# Google auth
-
-AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GoogleOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-)
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '256475749638-s4s2ej16qi44c1hoci8ei677146kejt2.apps.googleusercontent.com'
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
-
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
+REGISTER_REDIRECT_URL = "/login/"
 
 
-# SMTP server settings
+# SMTP settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 
+EMAIL_HOST_USER = 'simacenkoroma715@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'Hjvfy12345_'
+
 EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = os.getenv("EMAIL_USER")
 
-EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD")
+# Social auth
 
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
 
-# Token settings
+# Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '494460636913-ehqan5d28552gciqv69g7q3b0e73fpjc.apps.googleusercontent.com'
 
-TOKEN_LENGTH = 8
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 
-TOKEN_REPEATS = 3
+# Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '1023154408295391'
 
-TOKEN_SYMBOLS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+SOCIAL_AUTH_FACEBOOK_SECRET = '4fcf5092c796fa8991aeb94fff43a0cd'

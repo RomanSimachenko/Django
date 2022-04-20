@@ -1,7 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Login{% endblock title %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}Login{% endblock title %} {% block content %}
 <div style="margin-top: 20%; margin-left: 35%;">
     <form action="" method="POST">
         {% csrf_token %}
@@ -10,10 +7,7 @@
         <br>
         <title>Password: </title>
         <input type="password" name="password" id="password">
-        <br>
-        {% for message in messages %}
-        {{message}}
-        {% endfor %}
+        <br> {% for message in messages %} {{message}} {% endfor %}
         <br>
         <button type="submit">Submit</button>
     </form>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock title %}
+
+{% block content %}
+<div class="main">
+    <div class="products">
+        <ul class="catalog-grid">
+        {% for product in products %}
+            <li class="catalog-grid__cell catalog-grid__cell_type_slim">
+                <div class="product">
+                    <a href="#">
+                        {% comment %} <img src="{{product.image.url}}" alt=""> {% endcomment %}
+                    </a>
+                    <a href="#" class="product-title">{{product.title}}</a>
+                    <div class="product-price">
+                        <p>{{product.price}}</p>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

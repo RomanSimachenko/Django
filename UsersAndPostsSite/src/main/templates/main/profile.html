@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{user.username}} Profile {% endblock title %}
+
+{% block content %}
+
+<div>
+    <div style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: auto;">
+        <div
+            style="width: 30%; height: 20%; position: absolute; top: 50%; left: 50%; margin: -20% 0 0 -15%; text-align: center;">
+            <a href="{{request.META.HTTP_REFERER}}"
+                style="font-size: 22px; color: white; text-decoration: none; border: 5px solid #212529; background-color: #212529;"><b>Get
+                    back</b></a>
+            {% if request.user == user %}
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% endif %}
+                <div>
+                    <img src="{{user.avatar.url}}" alt="" style="border-radius: 30%; max-width: 50%;">
+                    {% if request.user == user %}
+                    {{form.as_p}}
+                    {% endif %}
+                </div>
+                <div style="margin-top: 5%;">
+                    {% if request.user != user %}
+                    {% if user in folls %}
+                    <a class="btn btn-primary" href="{% url 'unfollow' user.id %}">Unfollow</a>
+                    {% else %}
+                    <a class="btn btn-primary" href="{% url 'follow' user.id %}">Follow</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+                <div style="margin-top: 5%;">
+                    <div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1" id="id_username" maxlength="150" required
+                                name="username" value="{{user.username}}" disabled>
+                            <label for="id_username">Username</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                aria-describedby="basic-addon2" id="id_email" maxlength="254" required name="email"
+                                value="{{user.email}}" disabled>
+                            <label for="id_email">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            {% if request.user == user %}
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                                aria-describedby="basic-addon2" id="id_first_name" maxlength="150" required
+                                name="first_name" value="{{user.first_name}}">
+                            {% else %}
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                                aria-describedby="basic-addon2" id="id_first_name" maxlength="150" required
+                                name="first_name" value="{{user.first_name}}" disabled>
+                            {% endif %}
+                            <label for="id_first_name">First name</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            {% if request.user == user %}
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                                aria-describedby="basic-addon2" id="id_last_name" maxlength="150" required
+                                name="last_name" value="{{user.last_name}}">
+                            {% else %}
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                                aria-describedby="basic-addon2" id="id_last_name" maxlength="150" required
+                                name="last_name" value="{{user.last_name}}" disabled>
+                            {% endif %}
+                            <label for="id_last_name">Last name</label>
+                        </div>
+                        {% if request.user == user %}
+                        <div class="form-floating mb-3">
+                            <input type="datetime" class="form-control" placeholder="Date joined"
+                                aria-label="Date joined" aria-describedby="basic-addon2" id="id_date_joined" required
+                                name="date_joined" value="{{user.date_joined}}" disabled>
+                            <label for="id_date_joined">Date_joined</label>
+                        </div>
+                        {% endif %}
+                        {% if request.user == user %}
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div
+        style="width: 30%; height: 20%; position: absolute; top: 50%; left: 0; margin: -20% 0 -15% 0;  text-align: center;">
+        <div>
+            <h3>Posts</h3>
+        </div>
+        <div>
+            <ul class="list-group">
+                {% for post in posts %}
+                <li class="list-group-item">
+                    <a href="{% url 'post' post.id %}" style="text-decoration: none;">{{post.title}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div style="position: absolute; right: 0; width: 15%; margin: 2% 3% 0 1%;">
+        <div>
+            <h4 style="text-align: center;">
+                Followers
+            </h4>
+        </div>
+        <div>
+            <ul class="list-group">
+                {% for follower in followers %}
+                <li class="list-group-item">@<a style="text-decoration: none;"
+                        href="{% url 'profile' follower.user.id %}">{{follower.user.username}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

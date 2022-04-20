@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Users {% endblock title %}
+
+{% block content %}
+
+<div style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: auto;">
+    {% if request.user.is_authenticated %}
+    <div style="left: 0; width: 20%; position: absolute;  margin: 7% 1% 0 1%; text-align: center;">
+        <div>
+            <h3>Followed</h3>
+        </div>
+        <div>
+            <ul class="list-group">
+                {% for follower in followed %}
+                <li class="list-group-item">
+                    @<a href="{% url 'profile' follower.id %}" style="text-decoration: none;">{{follower.username}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+    <div style="width: 50%; height: 10%; position: absolute; top: 50%; left: 50%; margin: -20% 0 0 -25%;">
+        {% for user in users %}
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4" style="max-width: 15%;">
+                    <img src="{{user.avatar.url}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="{% url 'profile' user.id %}"
+                                style="text-decoration: none; color: black;">{{user.first_name}}
+                                {{user.last_name}} ({{user.username}})</a></h3>
+                        <p class="card-text">{{user.about}}</p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

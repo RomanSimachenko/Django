@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} Quiz {% endblock title %}
+
+{% block content %}
+<div>
+    <div>
+        <h1>{{quiz_name}}</h1>
+    </div>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <div>
+                    <label for="email">Your email: </label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="name">Full name: </label>
+                    <input type="text" id="name" name="name">
+                </div>
+                {% for question in questions %}
+                <div>
+                    <div>
+                        <label for="question">{{question.ask}}</label>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="radio" id="radio1" name="{{question.ask}}" value="1" checked>
+                            <label for="radio1">{{question.answer1}}</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radio2" name="{{question.ask}}" value="2">
+                            <label for="radio2">{{question.answer2}}</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radio3" name="{{question.ask}}" value="3">
+                            <label for="radio3">{{question.answer3}}</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radio4" name="{{question.ask}}" value="4">
+                            <label for="radio4">{{question.answer4}}</label>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <input type="submit"></input>
+        </form>
+    </div>
+</div>
+{% endblock content %}

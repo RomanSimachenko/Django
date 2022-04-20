@@ -2,20 +2,10 @@
 
 <div class="header">
     <div>
-        <div>
-            {% if user.is_authenticated %}
-            <h2 class="hello">Hello <a href="{% url 'user-profile' user.id %}">{{request.user.username}}</a></h2>
-            {% endif %}
-        </div>
-        <div class="auth-buttons">
-            <ul class="nav-items">
-                {% if request.user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                {% endif %}
-            </ul>
-        </div>
+        {% if request.user.is_authenticated %}
+        Hello <a href="{% url 'user-profile' user.id %}">{{request.user.username}}</a>
+        {% else %}
+        Hello
+        {% endif %}
     </div>
 </div>

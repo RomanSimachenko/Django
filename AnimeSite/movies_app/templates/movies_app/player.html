@@ -1,0 +1,11 @@
+<a href="{% url 'movie_detail' movie.id %}">Back</a>
+<div class="page-video">
+    <iframe id="kodik-player" src="{{movie.link}}" width="1920" height="1080" frameborder="0" allowfullscreen
+        allow="autoplay *; fullscreen *"></iframe>
+
+    <script type="text/javascript">
+        var kodikIframe = document.getElementById("kodik-player").contentWindow;
+
+        kodikIframe.postMessage({ key: "kodik_player_api", value: { method: "seek", seconds: 67 } }, '*');
+    </script>
+</div>

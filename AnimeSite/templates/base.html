@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img1/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img1/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img1/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img1/favicon/apple-icon-180x180.png' %}">
+    <link rel="apple-touch-icon" sizes="256x256" href="{% static 'img1/favicon/apple-icon-256x256.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img1/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img1/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img1/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img1/favicon/favicon-16x16.png' %}">
+    <link href="{% static 'css1/jquery.fancybox.min.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css1/engine.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css1/main.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css1/main.adaptive.css' %}" type="text/css" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta content="===``" name="application-name">
+    <meta content="===``" name="apple-mobile-web-app-title">
+    <script src="{% static 'js1/jquery3.js' %}"></script>
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+
+<body>
+    {% include 'include/nav.html' %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <script src="{% static 'js1/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js1/main.js' %}"></script>
+</body>
+
+</html>
