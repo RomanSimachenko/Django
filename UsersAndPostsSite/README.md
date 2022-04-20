@@ -9,10 +9,10 @@
 1. Create virtual environment `$ python/python3 -m venv venv`
 2. Install all the requirements `$ pip install -r requirements.txt`
 
-At the root of the project (where is manage.py) create shell script `$ vim/nano setenv.sh` and add to it next variables:
+At the root of the project (where is `manage.py`) create shell script `$ vim/nano setenv.sh` and add to it next variables:
 ```
-SECRET_KEY=<django secret key>
-DEBUG=True
+export SECRET_KEY="<django secret key>"
+export DEBUG=True
 ```
 Then activate it `$ ./source setenv.sh`
 
