@@ -6,7 +6,7 @@
 1. Python 3.8+
 
 #### Installation
-1. Create virtual environment `$ python/python3 -m venv venv` then activate it `$ source/. venv/bin/activate`
+1. Create the virtual environment `$ python/python3 -m venv venv` then activate it `$ source/. venv/bin/activate`
 2. Install all the requirements `$ pip install -r requirements.txt`
 3. Do makemigrations and migrate `$ python/python3 manage.py makemigrations` then `$ python/python3 manage.py migrate`
 
