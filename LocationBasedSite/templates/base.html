@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav_sidebar.css' %}">
+    <script src="{% static 'js/nav_sidebar.js' %}" defer=""></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}">
+
+
+    <script src="{% static 'saved_resource' %}"></script>
+    <link href="{% static 'css/ol.css' %}" type="text/css" media="all" rel="stylesheet">
+    <link href="{% static 'css/ol3.css' %}" type="text/css" media="all" rel="stylesheet">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/ol.js' %}"></script>
+    <script src="{% static 'js/jquery.init.js' %}"></script>
+    <script src="{% static 'js/OLMapWidget.js' %}"></script>
+    <script src="{% static 'js/core.js' %}"></script>
+    <script src="{% static 'js/RelatedObjectLookups.js' %}"></script>
+    <script src="{% static 'js/actions.js' %}"></script>
+    <script src="{% static 'js/urlify.js' %}"></script>
+    <script src="{% static 'js/prepopulate.js' %}"></script>
+    <script src="{% static 'js/xregexp.js' %}"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+
+    <meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body>
+    {% block content %}
+
+    {% endblock content %}
+</body>
+
+</html>

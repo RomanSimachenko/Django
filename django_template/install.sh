@@ -8,16 +8,16 @@ app_name=""
 read -p "Project name: " project_name
 read -p "Project path: " project_path
 
-mkdir $project_path/$project_name
+mkdir -p $project_path/$project_name
 
-cp manage.py $project_path/$project_name/
-cp -r config $project_path/$project_name/
+cp /home/roma/Documents/GitHub/Django/django_template/manage.py $project_path/$project_name/
+cp -r /home/roma/Documents/GitHub/Django/django_template/config $project_path/$project_name/
 
 cd $project_path/$project_name/
 
 # Virtual environment
 python3 -m venv venv
-. venv/bin/activate
+. ./venv/bin/activate
 
 mkdir -p static/{css,fonts,img,js}
 mkdir -p templates/include
@@ -26,11 +26,7 @@ touch templates/base.html
 # Libraries
 pip install -U pip
 pip install -U setuptools
-pip install autopep8
 pip install django
-
-./manage.py makemigrations
-./manage.py migrate
 
 pip freeze > requirements.txt
 
@@ -41,3 +37,6 @@ read -p "App name: " app_name
 touch $app_name/urls.py
 mkdir -p $app_name/templates/$app_name
 touch $app_name/templates/$app_name/index.html
+
+./manage.py makemigrations
+./manage.py migrate
