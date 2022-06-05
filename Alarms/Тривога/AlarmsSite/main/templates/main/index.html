@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Alarms online {% endblock title %}
+
+{% block content %}
+<div>
+    <ul>
+        {% for oblast, data in alarms %}
+        <div class="items">
+            <li>
+                {% if data.enabled %}🔴{% else %}🟢{% endif %}
+                <strong style="font-size: 22px;">{{oblast}}</strong>(type: state): {{data.enabled}};
+                Enabled at: {{data.enabled_at}}; Disabled at: {{data.disabled_at}};
+                <div>
+                    <ul>
+                        {% for rayon, info in data.districts.items %}
+                        <li>
+                            <div style="margin-top: 2px; margin-bottom: 3px; margin-left: 1%;">
+                                {% if info.enabled %}🔴{% else %}🟢{% endif %}
+                                <u style="color: black;">{{rayon}}</u>(type: {{info.type}}): {{info.enabled}};
+                                Enabled at: {{data.enabled_at}}; Disabled at: {{data.disabled_at}};
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

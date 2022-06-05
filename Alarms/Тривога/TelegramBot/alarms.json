@@ -1,0 +1,933 @@
+{
+    "Вінницька область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Вінницький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Могилів-Подільський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Жмеринський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Гайсинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Тульчинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Хмільницький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:50:49+00:00"
+    },
+    "Волинська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Луцький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Ковельський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Володимир-Волинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Камінь-Каширський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:55:16+00:00"
+    },
+    "Дніпропетровська область": {
+        "enabled": true,
+        "type:": "state",
+        "districts": {
+            "Криворізький район": {
+                "enabled": true,
+                "type": "district",
+                "enabled_at": "2022-04-02T17:47:37+00:00",
+                "disabled_at": null
+            },
+            "Павлоградський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Кам’янський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Синельниківський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-04-02T08:51:24+00:00"
+            },
+            "Новомосковський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Дніпровський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Нікопольський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": "2022-04-02T17:47:12+00:00",
+        "disabled_at": null
+    },
+    "Донецька область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Покровський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-04-02T17:36:58+00:00"
+            },
+            "Краматорський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-04-02T17:37:15+00:00"
+            },
+            "Бахмутський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-04-02T17:37:06+00:00"
+            },
+            "Волноваський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Маріупольський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Донецький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Кальміуський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Горлівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T17:14:31+00:00"
+    },
+    "Житомирська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Бердичівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Житомирський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Новоград-Волинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Коростенський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T03:59:40+00:00"
+    },
+    "Закарпатська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Ужгородський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Берегівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Тячівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Хустський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Рахівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Мукачівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T04:01:20+00:00"
+    },
+    "Запорізька область": {
+        "enabled": true,
+        "type:": "state",
+        "districts": {
+            "Бердянський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Запорізький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-03-30T15:14:38+00:00"
+            },
+            "Пологівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Василівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Мелітопольський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": "2022-04-02T17:47:14+00:00",
+        "disabled_at": null
+    },
+    "Івано-Франківська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Верховинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Івано-Франківський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Калуський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Надвірнянський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Коломийський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Косівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T15:00:44+00:00"
+    },
+    "Київська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Броварський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Фастівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Бучанський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Білоцерківський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Обухівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Бориспільський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Вишгородський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T15:01:17+00:00"
+    },
+    "Кіровоградська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Кропивницький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-03-27T19:57:39+00:00"
+            },
+            "Голованівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Олександрійський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Новоукраїнський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T15:01:42+00:00"
+    },
+    "Луганська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Старобільський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Сватівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Сєвєродонецький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Щастинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-03-28T03:22:00+00:00"
+    },
+    "Львівська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Червоноградський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Львівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Самбірський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Дрогобицький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Золочівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Стрийський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Яворівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:54:33+00:00"
+    },
+    "Миколаївська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Первомайський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Баштанський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Миколаївський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Вознесенський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T13:37:39+00:00"
+    },
+    "Одеська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Одеський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Подільський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Березівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Болградський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Білгород-Дністровський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Роздільнянський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Ізмаїльський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T03:04:45+00:00"
+    },
+    "Полтавська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Полтавський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Миргородський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Кременчуцький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Лубенський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:54:08+00:00"
+    },
+    "Рівненська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Вараський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Рівненський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Сарненський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Дубенський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:54:32+00:00"
+    },
+    "Сумська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Роменський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Сумський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Шосткинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-03-29T21:27:01+00:00"
+            },
+            "Охтирський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Конотопський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T03:11:33+00:00"
+    },
+    "Тернопільська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Тернопільський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Чортківський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Кременецький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T15:00:16+00:00"
+    },
+    "Харківська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Ізюмський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": "2022-04-02T11:55:14+00:00"
+            },
+            "Харківський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Лозівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Богодухівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Куп’янський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Чугуївський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Красноградський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:54:55+00:00"
+    },
+    "Херсонська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Каховський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Бериславський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Скадовський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Херсонський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Генічеський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-03-27T20:13:01+00:00"
+    },
+    "Хмельницька область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Хмельницький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Шепетівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Кам’янець-Подільський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:58:43+00:00"
+    },
+    "Черкаська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Уманський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Черкаський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Звенигородський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Золотоніський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T14:58:44+00:00"
+    },
+    "Чернівецька область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Вижницький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Чернівецький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Дністровський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T04:01:25+00:00"
+    },
+    "Чернігівська область": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {
+            "Ніжинський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Чернігівський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Прилуцький район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Новгород-Сіверський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            },
+            "Корюківський район": {
+                "enabled": false,
+                "type": "district",
+                "enabled_at": null,
+                "disabled_at": null
+            }
+        },
+        "enabled_at": null,
+        "disabled_at": "2022-04-01T17:09:01+00:00"
+    },
+    "м. Київ": {
+        "enabled": false,
+        "type:": "state",
+        "districts": {},
+        "enabled_at": null,
+        "disabled_at": "2022-04-02T15:01:13+00:00"
+    }
+}
