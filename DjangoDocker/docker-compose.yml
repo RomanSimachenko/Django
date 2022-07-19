@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+   psql_db:
+      image: postgres:13.0-alpine
+      container_name: postgres-13.0-alpine_c
+      volumes:
+         - postgres_data:/var/lib/postgresql/data/
+      env_file: ./.env
+
+   web:
+      build: ./DjangoDocker
+      container_name: django_docker_c
+      command: gunicorn config.wsgi:application --bind 0.0.0.0:${DJANGO_RUNSERVER_PORT}
+      volumes:
+         - static_volume:/home/app/staticfiles
+      env_file: ./.env
+      depends_on:
+         - psql_db
+
+   nginx:
+      image: nginx:1.23.0-alpine
+      container_name: nginx-1.23.0-alpine_c
+      volumes:
+         - ./nginx:/etc/nginx/conf.d
+         - static_volume:/home/app/staticfiles
+      env_file: ./.env
+      ports:
+         - ${DJANGO_RUNSERVER_PORT}:${DJANGO_RUNSERVER_PORT}
+      depends_on:
+         - web
+
+   redis:
+      image: redis:alpine3.16
+      container_name: redis-alpine3.16_c
+      depends_on:
+         - web
+
+
+volumes:
+   postgres_data:
+   static_volume:

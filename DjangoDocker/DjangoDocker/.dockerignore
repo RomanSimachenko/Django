@@ -1,0 +1,9 @@
+migrations
+
+__pycache__
+
+venv
+
+setenv.sh
+
+*.sqlite3
