@@ -9,10 +9,12 @@ services:
       env_file: ./.env
 
    web:
+      image: django_docker
       build: ./DjangoDocker
       container_name: django_docker_c
       command: gunicorn config.wsgi:application --bind 0.0.0.0:${DJANGO_RUNSERVER_PORT}
       volumes:
+         - ./DjangoDocker:/home/app
          - static_volume:/home/app/staticfiles
       env_file: ./.env
       depends_on:
