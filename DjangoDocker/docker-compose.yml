@@ -2,27 +2,27 @@ version: '3'
 
 services:
    psql_db:
-      image: postgres:13.0-alpine
-      container_name: postgres-13.0-alpine_c
+      image: postgres:latest
+      container_name: postgres-latest_c
       volumes:
          - postgres_data:/var/lib/postgresql/data/
       env_file: ./.env
 
    web:
-      image: django_docker
-      build: ./DjangoDocker
-      container_name: django_docker_c
+      image: django_site:latest
+      build: ./DjangoSite
+      container_name: django_site-latest_c
       command: gunicorn config.wsgi:application --bind 0.0.0.0:${DJANGO_RUNSERVER_PORT}
       volumes:
-         - ./DjangoDocker:/home/app
+         - ./DjangoSite:/home/app
          - static_volume:/home/app/staticfiles
       env_file: ./.env
       depends_on:
          - psql_db
 
    nginx:
-      image: nginx:1.23.0-alpine
-      container_name: nginx-1.23.0-alpine_c
+      image: nginx:latest
+      container_name: nginx-latest_c
       volumes:
          - ./nginx:/etc/nginx/conf.d
          - static_volume:/home/app/staticfiles
@@ -33,9 +33,21 @@ services:
          - web
 
    redis:
-      image: redis:alpine
-      container_name: redis-alpine_c
+      image: redis:latest
+      container_name: redis-latest_c
       depends_on:
+         - web
+
+   celery:
+      image: celery:latest
+      build: ./DjangoSite
+      container_name: celery-latest_c
+      command: celery -A config worker
+      volumes:
+         - ./DjangoSite:/home/app
+      env_file: ./.env
+      depends_on:
+         - redis
          - web
 
 volumes:
