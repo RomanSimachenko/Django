@@ -7,3 +7,5 @@ venv
 setenv.sh
 
 *.sqlite3
+
+*.db

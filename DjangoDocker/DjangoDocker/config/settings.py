@@ -122,3 +122,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Redis settings
+
+REDIS_HOST = os.getenv("REDIS_HOST", 'localhost')
+
+REDIS_PORT = os.getenv("REDIS_PORT", 6379)

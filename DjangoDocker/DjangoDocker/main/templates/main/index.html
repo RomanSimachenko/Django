@@ -1,1 +1,27 @@
+<!DOCTYPE html>
 
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Index</title>
+   </head>
+
+   <body>
+      <div>
+         Add pairs to Redis:
+         <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Key" name="key" id="key"></input>
+            :
+            <input type="text" placeholder="Value" name="value" id="value"></input>
+            <button type=submit>Submit</button>
+         </form>
+         All Redis keys:
+         <br>
+         {% for key in redis_keys %}
+         {{key}}<br>
+         {% endfor %}
+      </div>
+   </body>
+</html>

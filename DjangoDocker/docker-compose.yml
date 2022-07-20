@@ -31,11 +31,10 @@ services:
          - web
 
    redis:
-      image: redis:alpine3.16
-      container_name: redis-alpine3.16_c
+      image: redis:alpine
+      container_name: redis-alpine_c
       depends_on:
          - web
-
 
 volumes:
    postgres_data:
