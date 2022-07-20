@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+   bot:
+      image: bot:latest
+      build: ./TelegramBot
+      container_name: bot-latest_c
+      command: python3 ./main.py
+      volumes:
+         - ./TelegramBot:/home/src/bot
+      env_file: ./.env
+
    psql_db:
       image: postgres:latest
       container_name: postgres-latest_c
@@ -14,18 +23,19 @@ services:
       container_name: django_site-latest_c
       command: gunicorn config.wsgi:application --bind 0.0.0.0:${DJANGO_RUNSERVER_PORT}
       volumes:
-         - ./DjangoSite:/home/app
-         - static_volume:/home/app/staticfiles
+         - ./DjangoSite:/home/src/app
+         - static_volume:/home/src/app/staticfiles
       env_file: ./.env
       depends_on:
          - psql_db
+         - bot
 
    nginx:
       image: nginx:latest
       container_name: nginx-latest_c
       volumes:
          - ./nginx:/etc/nginx/conf.d
-         - static_volume:/home/app/staticfiles
+         - static_volume:/home/src/app/staticfiles
       env_file: ./.env
       ports:
          - ${DJANGO_RUNSERVER_PORT}:${DJANGO_RUNSERVER_PORT}
@@ -37,6 +47,7 @@ services:
       container_name: redis-latest_c
       depends_on:
          - web
+         - bot
 
    celery:
       image: celery:latest
@@ -44,7 +55,7 @@ services:
       container_name: celery-latest_c
       command: celery -A config worker
       volumes:
-         - ./DjangoSite:/home/app
+         - ./DjangoSite:/home/src/app
       env_file: ./.env
       depends_on:
          - redis
