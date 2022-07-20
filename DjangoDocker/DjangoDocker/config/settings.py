@@ -129,3 +129,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REDIS_HOST = os.getenv("REDIS_HOST", 'localhost')
 
 REDIS_PORT = os.getenv("REDIS_PORT", 6379)
+
+
+# Celery Configuration Options
+
+from celery.schedules import crontab
+from tasks import sample_task
+
+CELERY_WORKER_REDIRECT_STDOUTS = False
+
+CELERY_BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT
+
+CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT
+
+CELERY_BEAT_SCHEDULE = {
+    "sample_task": {
+        "task": "tasks.sample_task",
+        "schedule": crontab(minute="*/1"),
+    },
+}
