@@ -43,7 +43,7 @@ services:
          - web
 
    redis:
-      image: redis:latest
+      image: redis:alpine
       container_name: redis-latest_c
       depends_on:
          - web
