@@ -9,7 +9,19 @@
 $ git clone https://github.com/RomanSimachenko/Django.git
 $ cd ./Django/Technical task TEB Team/
 ```
-- (Optional) Change environment variables in `setenv.sh`
+- Create file with environment variables like this:
+```
+# Django settings
+export SECRET_KEY="django-secret-key"
+export DEBUG=True or False
+export ALLOWED_HOSTS="*, ..."
+
+# Telegram bot settings
+export API_TOKEN="telegram-bot-api-token"
+
+# Keitaro
+export API_KEY="keitaro-api-key"
+```
 
 - Create virtual environment, activate it and environment variables:
 ```
