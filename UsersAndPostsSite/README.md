@@ -6,16 +6,16 @@
 1. Python 3.8+
 
 #### Installation
-1. Create the virtual environment `$ python3 -m venv venv` then activate it `$ source/. venv/bin/activate`
+1. Create the virtual environment `$ python3 -m venv venv` then activate it `$ source ./venv/bin/activate`
 2. Install all the requirements `$ pip install -r requirements.txt`
-3. Do makemigrations and migrate `$ python3 manage.py makemigrations` then `$ python3 manage.py migrate`
+3. Do makemigrations and migrate `$ python3 ./manage.py makemigrations` then `$ python3 ./manage.py migrate`
 
-At the root of the project (where is `manage.py`) create shell script `$ vim/nano setenv.sh` and add next variables to it:
+At the root of the project (where is `manage.py`) create shell script `$ vim/nano ./setenv.sh` and add next variables to it:
 ```shell
 export SECRET_KEY="<django secret key>"
 export DEBUG=True
 ```
-Then activate it `$ source/. setenv.sh`
+Then activate it `$ source ./setenv.sh`
 
-#### Starting
-Project can be started using the command `$ python3 manage.py runserver localhost:8000` or `$ manage.py runserver localhost:8000`
+#### Running
+Project can be started using the command `$ python3 ./manage.py runserver localhost:8000` or `$ ./manage.py runserver localhost:8000`
