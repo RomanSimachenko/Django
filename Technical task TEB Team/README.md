@@ -9,7 +9,7 @@
 $ git clone https://github.com/RomanSimachenko/Django.git
 $ cd ./Django/Technical task TEB Team/
 ```
-- Create file with environment variables like this:
+- Create file with environment variables(`setenv.sh`) like this:
 ```
 # Django settings
 export SECRET_KEY="django-secret-key"
