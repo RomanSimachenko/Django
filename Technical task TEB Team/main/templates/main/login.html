@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% block title %} Login {% endblock title %} 
+
+{% block content %}
+<div class="center-block">
+  <div>
+    <div>
+      <h1>
+        Login
+      </h1>
+    </div>
+    <div>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="input-group flex-nowrap" style="margin-bottom: 1%;">
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" name="username">
+        </div>
+        <div class="input-group flex-nowrap" style="margin-bottom: 1%;">
+          <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" name="password">
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

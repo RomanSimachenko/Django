@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} Index {% endblock title %}
+
+{% block content %}
+<div class="center-block">
+  <div>
+    <div>
+      <h1 style="text-align: center;">Statisticts for user {{username}}</h1>
+    </div>
+    <div style="text-align: center;">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div style="font-size: 20px;">
+          Data: 
+          <label for="from">from</label>
+          <input type="date" id="from" name="from" value="{{date_from}}" min="2015-01-01" max="{{date_today}}"></input>
+          <label for="to">to</label>
+          <input type="date" id="to" name="to" value="{{date_to}}" min="2015-01-01" max="{{date_today}}"></input>
+        <div>
+        <div>
+          <button type="submit" class="btn btn-primary" style="margin: 1%; font-size: 20px;">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div style="font-size: 20px;">
+      <div>
+        Clicks: {{clicks}}
+      </div>
+      <div>
+        Conversions: {{conversions}}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
