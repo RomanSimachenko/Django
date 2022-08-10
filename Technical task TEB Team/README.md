@@ -24,16 +24,16 @@ $(venv) pip install -r requirements.txt
 
 - Do migrations:
 ```
-python3 ./manage.py makemigrations && python3 ./manage.py migrate
+$(venv) python3 ./manage.py makemigrations && python3 ./manage.py migrate
 ```
 
 - (Optional) Create superuser:
 ```
-python3 ./manage.py createsuperuser
+$(venv) python3 ./manage.py createsuperuser
 ```
 
 #### Running
-Django site: python3 ./manage.py runserver localhost:8000
-Telegram bot: python3 ./bot.py
+Django site: `$(venv) python3 ./manage.py runserver localhost:8000`
+Telegram bot: `$(venv) python3 ./bot.py`
 
 Then, you can access to the site by the address `http://localhost:8000`, and to the Telegram bot by the tag `@TEBTeam_bot`
